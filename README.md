@@ -45,3 +45,7 @@ should give you something like that
     indices  = result[3]
 
 ```
+
+here's another example of random shapes (multiple.js):
+
+![lathe](img/multi.png)
