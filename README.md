@@ -15,20 +15,27 @@ create a lathe object and pass it a profile
         {x:0,   y:-1}
     ]
 
-    //create a Lathe object with the profile and a side count (min 3)
+    //create a Lathe object with the profile and a side count
 
     let lathe = new Lathe(profile, 16)
 
     // then the buffers are available as:
 
-    lathe.vertices = Float32Array // vertices as x/y/z 
-    lathe.uvs = Float32Array // uvs coordinates as u/v 
+    lathe.vertices = Float32Array // vertices as x,y,z 
+    lathe.uvs = Float32Array // uvs coordinates as u,v 
     lathe.normals = Float32Array // *vertex* normals as normalized x/y/z
     lathe.indices = Array // face indices 
 
-    //or you can create a Lathe instance and reuse it:
+``` 
 
+should give you something like that
+
+![lathe](img/img0.png)
+
+``` javascript
+    //you can also create a Lathe instance and reuse it:
     let lathe = new Lathe()
+
     let result = lathe.compute( profile, sides )
 
     //and access the values as:
@@ -38,6 +45,3 @@ create a lathe object and pass it a profile
     indices  = result[3]
 
 ```
-
-should give you something like that
-![lathe](img/img0.png)
